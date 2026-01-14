@@ -1,5 +1,8 @@
 const path = require('path');
 
+// Ensure .env is loaded (especially important for production)
+require('dotenv').config();
+
 /**
  * Parse DATABASE_URL and extract individual connection parameters
  * Format: postgresql://user:password@host:port/database?options
