@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Generate preview pathname based on content type and document
@@ -66,6 +66,9 @@ module.exports = ({ env }) => {
   return {
     auth: {
       secret: env("ADMIN_JWT_SECRET"),
+    },
+    secrets: {
+      encryptionKey: env("ENCRYPTION_KEY"),
     },
     apiToken: {
       salt: env("API_TOKEN_SALT"),
